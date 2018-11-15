@@ -1,4 +1,4 @@
-# Developed by - Nihit Vyas, Steven Phaedonos
+Developed by - Nihit Vyas, Steven Phaedonos
 
 ## Running the project
 1. Ensure that the [first-time setup](#first-time-setup) steps have been performed
