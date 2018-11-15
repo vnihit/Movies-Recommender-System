@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    restart: always
+    image: postgres
+    environment:
+      - POSTGRES_DB=recommender
+      - POSTGRES_USER=recommender
+      - POSTGRES_PASSWORD=recommender
+      - PGDATA=/db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/db
+
+  backend:
+    restart: always
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/backend
+    depends_on:
+      - db
+    command: uwsgi --ini uwsgi.ini --lazy-apps
+
+  frontend:
+    restart: always
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
+    depends_on:
+      - backend
+    command: npm start
+

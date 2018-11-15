@@ -1,0 +1,125 @@
+.app {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.logo {
+  animation: app-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header h1 {
+  margin: 24px 0 0;
+  color: white;
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  max-height: 100px;
+  display: flex;
+  padding: 5px 0;
+}
+.card .poster {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+}
+.card .content {
+  width: 90%;
+  white-space: normal;
+}
+.card .poster img {
+  height: 100%;
+}
+.card .title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-list > div {
+  margin: 10px 0;
+  min-height: 100px;
+  background: rgba(232,234,246,0.33);
+  border-radius: 5px;
+  border: 1px dashed #E8EAF6;
+}
+
+.movie-list .placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 1vmin);
+}
+
+.movie-list .movie-card {
+  background: rgb(236, 236, 236);
+  border: 1px solid rgb(217, 217, 217);
+  min-height: 155px;
+  padding: 10px;
+  display: flex;
+  position: relative;
+}
+.movie-list .movie-card .poster {
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+  height: 100%;
+}
+.movie-list .movie-card .content {
+  width: 88%;
+  padding-left: 10px;
+}
+.movie-list .movie-card .poster img {
+  width: 100%;
+}
+.movie-list .movie-card .title {
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 20px;
+}
+.movie-list .movie-card .info span {
+  font-weight: 700;
+  margin-right: 5px;
+}
+.movie-list .movie-card .overview {
+  font-size: 85%;
+  margin-top: 5px;
+}
+.movie-list .movie-card .star {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 150%;
+  color: #1890ff;
+}
+.movie-list .movie-card .star:hover {
+  color: #BDBDBD;
+}
