@@ -1,7 +1,7 @@
 uWSGI==2.0.17.1
 djangorestframework==3.8.2
 django-cors-headers==2.4.0
-Django==2.2.13
+Django==2.2.22
 requests==2.19.1
 psycopg2
 pandas
